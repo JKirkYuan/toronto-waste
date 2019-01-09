@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import styled from 'styled-components';
 import SearchBar from './components/SearchBar';
 import ResultsList from './components/ResultsList';
+import FavoritesList from './components/FavoritesList';
 
 const AppContainer = styled.div`
     height: 100vh;
@@ -32,6 +33,7 @@ class App extends Component {
         </Header>
         <SearchBar />
         <ResultsList />
+        <FavoritesList />
       </AppContainer>
     );
   }
