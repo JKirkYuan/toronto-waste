@@ -1,8 +1,8 @@
 import axios from 'axios';
 import Action from 'redux';
 import { call, put } from 'redux-saga/effects';
-import { WasteRequestParams } from './index';
-import { LOAD_WASTE_REQUEST } from '../reducers/types';
+import { WasteRequestParams, AddSearchResultsParams, addSearchResults } from './index';
+import { LOAD_WASTE_REQUEST, WasteData } from '../actions/index';
 import { addHandleEvery } from '../handleEveryAction';
 
 const getWaste = () => {
@@ -11,9 +11,14 @@ const getWaste = () => {
 }
 
 function* loadWaste(action: WasteRequestParams) {
-    console.log("inside effect");
     const response = yield call(getWaste);
-    console.log(response);
+    const filtered = response.data.filter((waste: WasteData) => {
+        //const keywords = waste.keywords.replace(/[()]/g, '').split(/[ ,]+/);
+        if (waste.keywords.includes(action.payload)) {
+            return waste;
+        };
+    });
+    yield put(addSearchResults(filtered));
 }
 
 addHandleEvery({
