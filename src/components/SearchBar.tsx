@@ -35,13 +35,15 @@ const StyledSearchIcon = styled(IoIosSearch)`
     width: 3em;
 `;
 
-type Props = {
+type DispatchProps = {
     wasteRequest(input: string): WasteRequestParams;
 };
 
 type State = {
     term: string;
 };
+
+type Props = {} & DispatchProps;
 
 class SearchBar extends Component<Props, State> {
     constructor(props: Props) {

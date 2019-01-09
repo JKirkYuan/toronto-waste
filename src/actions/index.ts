@@ -1,9 +1,10 @@
 import { Action } from 'redux';
 export const ADD_SEARCH_RESULT = 'Adding Search Results';
-export const LOAD_WASTE_REQUEST = 'Request for Waste List'
+export const LOAD_WASTE_REQUEST = 'Request for Waste List';
+export const ADD_TO_FAVORITES = 'Adding item to Favorites';
 
 export type WasteRequestParams = {
-    type: typeof LOAD_WASTE_REQUEST,
+    type: typeof LOAD_WASTE_REQUEST;
     payload: string;
 };
 
@@ -23,8 +24,8 @@ export type WasteData = {
 };
 
 export type AddSearchResultsParams = {
-    type: typeof ADD_SEARCH_RESULT,
-    payload: WasteData[]
+    type: typeof ADD_SEARCH_RESULT;
+    payload: WasteData[];
 };
 
 export function addSearchResults(wasteList: WasteData[]): AddSearchResultsParams {
@@ -32,4 +33,16 @@ export function addSearchResults(wasteList: WasteData[]): AddSearchResultsParams
         type: ADD_SEARCH_RESULT,
         payload: wasteList
     };
+}
+
+export type AddToFavoritesParams = {
+    type: typeof ADD_TO_FAVORITES;
+    payload: WasteData;
+}
+
+export function addToFavorites(waste: WasteData): AddToFavoritesParams {
+    return {
+        type: ADD_TO_FAVORITES,
+        payload: waste
+    }
 }
