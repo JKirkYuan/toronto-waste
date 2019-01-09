@@ -24,9 +24,9 @@ class ResultsList extends Component<Props> {
             return <></>;
         }
         return(
-            <>
+            <div>
                 {this.renderList()}
-            </>
+            </div>
         );
     }
 }

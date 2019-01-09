@@ -7,7 +7,7 @@ import styled from 'styled-components';
 import { IoIosSearch } from 'react-icons/io';
 
 const StyledInputContainer = styled.div`
-    margin: 2em;
+    margin: 1em;
     position: relative;
     display: flex;
     flex-direction: row;
@@ -18,11 +18,14 @@ const StyledInput = styled.input`
     font-size: 0.9em;
     padding: 0.8em 1.4em 0.8em 1.4em;
     box-sizing: border-box;
-    width: 90%;
+    width: 100%;
+    border-radius: 2px;
+    border: 1px solid grey;
 `;
 
 const StyledButton = styled.button`
-    width: 4.8%;
+    margin-left: 1em;
+    width: 4%;
     height: 4em;
     background-color: #1f824f;
     border-radius: 2px;
@@ -31,8 +34,9 @@ const StyledButton = styled.button`
 
 const StyledSearchIcon = styled(IoIosSearch)`
     fill: white;
-    height: 3em;
-    width: 3em;
+    height: 2em;
+    width: 2em;
+    transform: scale(-2,2);
 `;
 
 type DispatchProps = {
@@ -70,7 +74,7 @@ class SearchBar extends Component<Props, State> {
                     <StyledInput 
                         value={this.state.term}
                         onChange={this.onInputChange}
-                        placeholder="Takeout...">
+                    >
                     </StyledInput>
                     <StyledButton type="submit">
                         <StyledSearchIcon />

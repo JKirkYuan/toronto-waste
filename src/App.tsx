@@ -24,6 +24,12 @@ const Title = styled.div`
     font-weight: 700;
 `;
 
+const ListsContainer = styled.div`
+    display: flex;
+    flex-direction: column;
+    height: 75vh;
+`;
+
 class App extends Component {
   render() {
     return (
@@ -32,8 +38,10 @@ class App extends Component {
             <Title>Toronto Waste Lookup</Title>
         </Header>
         <SearchBar />
-        <ResultsList />
-        <FavoritesList />
+        <ListsContainer>
+            <ResultsList />
+            <FavoritesList />
+        </ListsContainer>
       </AppContainer>
     );
   }

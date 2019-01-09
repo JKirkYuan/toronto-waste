@@ -8,6 +8,7 @@ import ResultsListItem from './ResultsListItem';
 const StyledFavoritesContainer = styled.div`
     margin-top: 2em;
     background-color: #f5fef9;
+    height: 100%;
 `;
 
 const FavoritesTitle = styled.div`
@@ -33,12 +34,12 @@ class FavoritesList extends Component<Props> {
         );
     }
     render() {
-        if (!this.props.favoritesList) {
+        if (this.props.favoritesList.length === 0 || !this.props.favoritesList) {
             return <></>;
         }
         return(
             <StyledFavoritesContainer>
-                <FavoritesTitle>Favorites</FavoritesTitle>
+                <FavoritesTitle>Favourites</FavoritesTitle>
                 {this.renderList()}
             </StyledFavoritesContainer>
         );

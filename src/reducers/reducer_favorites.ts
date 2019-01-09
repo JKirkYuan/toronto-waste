@@ -11,8 +11,8 @@ export default function(state = initialState, action: AddToFavoritesParams) {
             }
             else {
                 return [
-                    action.payload,
                     ...state,
+                    action.payload,
                 ];
             }
     }
