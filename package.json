@@ -2,6 +2,7 @@
   "name": "toronto-waste",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://jkirkyuan.github.io/toronto-waste",
   "dependencies": {
     "@types/jest": "23.3.12",
     "@types/node": "10.12.18",
@@ -10,6 +11,7 @@
     "@types/react-redux": "^6.0.12",
     "@types/styled-components": "^4.1.4",
     "axios": "^0.18.0",
+    "gh-pages": "^2.0.1",
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
     "react-icons": "^3.2.2",
@@ -24,7 +26,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "yarn run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": "react-app"
