@@ -2,6 +2,8 @@
 
 Have you ever wondered what kind waste items go where? Let's find out together by searching the items up in the **Toronto Waste Wizard** database
 
+Hosted on GitHub Pages ➡️ [https://jkirkyuan.github.io/toronto-waste/](https://jkirkyuan.github.io/toronto-waste/)
+
 ### Getting Started
 
 - First, we need to install our dependencies. A quick `yarn install` should do the trick ✨
