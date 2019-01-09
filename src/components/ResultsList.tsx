@@ -25,7 +25,7 @@ const ResultTitle = styled.div`
 const ResultDesc = styled.div`
     width: 65%;
     li {
-        padding-top: 10px;
+        padding-bottom: 10px;
     }
 `;
 
