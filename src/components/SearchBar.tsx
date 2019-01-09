@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Dispatch } from 'redux';
 import { bindActionCreators } from 'redux';
-import { wasteRequest, WasteRequestParams } from '../actions/index';
+import { wasteRequest, clearWasteResults, WasteRequestParams, ClearWasteResultsParams } from '../actions/index';
 import styled from 'styled-components';
 import { IoIosSearch } from 'react-icons/io';
 
@@ -37,6 +37,7 @@ const StyledSearchIcon = styled(IoIosSearch)`
 
 type DispatchProps = {
     wasteRequest(input: string): WasteRequestParams;
+    clearWasteResults(): ClearWasteResultsParams;
 };
 
 type State = {
@@ -53,6 +54,9 @@ class SearchBar extends Component<Props, State> {
         this.onFormSubmit = this.onFormSubmit.bind(this);
     }
     onInputChange(event: React.FormEvent<HTMLInputElement>) {
+        if (event.currentTarget.value === '') {
+            this.props.clearWasteResults();
+        }
         this.setState({term: event.currentTarget.value});
     }
     onFormSubmit(event: React.FormEvent) {
@@ -78,7 +82,7 @@ class SearchBar extends Component<Props, State> {
 }
 
 const mapDispatchToProps = (dispatch: Dispatch) => {
-    return bindActionCreators({ wasteRequest }, dispatch);
+    return bindActionCreators({ wasteRequest, clearWasteResults }, dispatch);
 };
 
 export default connect(null, mapDispatchToProps)(SearchBar);
