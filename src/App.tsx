@@ -27,7 +27,7 @@ const Title = styled.div`
 const ListsContainer = styled.div`
     display: flex;
     flex-direction: column;
-    height: 75vh;
+    height: 79%;
 `;
 
 class App extends Component {

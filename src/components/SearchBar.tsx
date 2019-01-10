@@ -34,6 +34,7 @@ const StyledButton = styled.button`
 
 const StyledSearchIcon = styled(IoIosSearch)`
     fill: white;
+    padding-top: 2px;
     height: 2em;
     width: 2em;
     transform: scale(-2,2);
@@ -48,7 +49,7 @@ type State = {
     term: string;
 };
 
-type Props = {} & DispatchProps;
+type Props = DispatchProps;
 
 class SearchBar extends Component<Props, State> {
     constructor(props: Props) {
