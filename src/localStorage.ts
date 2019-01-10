@@ -1,4 +1,5 @@
 import rootReducer from './reducers/index';
+import { WasteData } from './actions';
 
 export const loadState = () => {
     try {
@@ -12,7 +13,12 @@ export const loadState = () => {
     }
 };
 
-export const saveState = (state: any) => {
+type State = {
+    wasteList: WasteData[];
+    favoritesList: WasteData[];
+}
+
+export const saveState = (state: State) => {
     try {
         const serializedState = JSON.stringify(state);
         localStorage.setItem('state', serializedState);
