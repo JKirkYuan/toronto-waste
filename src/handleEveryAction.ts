@@ -15,7 +15,6 @@ export function addHandleEvery(handlers: IHandleEvery) {
 
 export function* handleEveryAction(action: Action) {
     try {
-        console.log(action);
         const fn = handleEveryMap[action.type];
 		if (fn) {
 			yield fn(action);
