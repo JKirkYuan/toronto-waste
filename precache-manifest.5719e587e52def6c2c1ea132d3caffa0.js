@@ -4,19 +4,19 @@ self.__precacheManifest = [
     "url": "/toronto-waste/static/js/runtime~main.b5945f65.js"
   },
   {
-    "revision": "1c95e47c220eb1fbc0b6",
-    "url": "/toronto-waste/static/js/main.1c95e47c.chunk.js"
+    "revision": "d59c9792b5dfe9e2639c",
+    "url": "/toronto-waste/static/js/main.d59c9792.chunk.js"
   },
   {
     "revision": "d456c3335233393d7070",
     "url": "/toronto-waste/static/js/1.d456c333.chunk.js"
   },
   {
-    "revision": "1c95e47c220eb1fbc0b6",
+    "revision": "d59c9792b5dfe9e2639c",
     "url": "/toronto-waste/static/css/main.f8b4a8ee.chunk.css"
   },
   {
-    "revision": "e75c273383460532ff8d4f52c75883bd",
+    "revision": "3ff80e7d8c63ffb27484a517377af29c",
     "url": "/toronto-waste/index.html"
   }
 ];
