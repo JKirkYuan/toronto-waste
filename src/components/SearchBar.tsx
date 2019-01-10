@@ -66,13 +66,13 @@ class SearchBar extends Component<Props, State> {
     }
     onFormSubmit(event: React.FormEvent) {
         event.preventDefault();
-        this.props.wasteRequest(this.state.term);
+        this.props.wasteRequest(this.state.term.toLowerCase());
     }
     render(){
         return(
             <form onSubmit={this.onFormSubmit}>
                 <StyledInputContainer>
-                    <StyledInput 
+                    <StyledInput
                         value={this.state.term}
                         onChange={this.onInputChange}
                     >
