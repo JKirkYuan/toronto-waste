@@ -13,6 +13,10 @@ export function addHandleEvery(handlers: IHandleEvery) {
     }
 }
 
+export function getHandleEvery(actionType: string): Function {
+	return handleEveryMap[actionType];
+}
+
 export function* handleEveryAction(action: Action) {
     try {
         const fn = handleEveryMap[action.type];

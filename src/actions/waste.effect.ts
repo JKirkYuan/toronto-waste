@@ -5,7 +5,7 @@ import { WasteRequestParams, AddSearchResultsParams, addSearchResults } from './
 import { LOAD_WASTE_REQUEST, WasteData } from '../actions/index';
 import { addHandleEvery } from '../handleEveryAction';
 
-const getWaste = () => {
+export const getWaste = () => {
     const url = 'https://secure.toronto.ca/cc_sr_v1/data/swm_waste_wizard_APR?limit=1000';
     return axios.get(url);
 }

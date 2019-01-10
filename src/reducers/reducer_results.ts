@@ -1,5 +1,4 @@
 import { ADD_SEARCH_RESULT, AddSearchResultsParams, WasteData, ClearWasteResultsParams, CLEAR_WASTE_RESULTS } from '../actions/index';
-import { Action } from 'redux';
 
 const initialState: WasteData[] = [];
 
