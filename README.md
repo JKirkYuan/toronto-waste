@@ -4,6 +4,8 @@ Have you ever wondered what kind waste items go where? Let's find out together b
 
 Hosted on GitHub Pages ➡️ [https://jkirkyuan.github.io/toronto-waste/](https://jkirkyuan.github.io/toronto-waste/)
 
+- Favorites get saved to localStorage but is throttled by 1s! Try not to refresh too fast ⚡
+
 ### Getting Started
 
 - First, we need to install our dependencies. A quick `yarn install` should do the trick ✨
