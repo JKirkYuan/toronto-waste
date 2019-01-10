@@ -7,6 +7,8 @@ import FavoritesList from './components/FavoritesList';
 const AppContainer = styled.div`
     height: 100vh;
     width: 100vw;
+    display: flex;
+    flex-direction: column;
 `;
 
 const Header = styled.header`
@@ -24,10 +26,11 @@ const Title = styled.div`
     font-weight: 700;
 `;
 
-const ListsContainer = styled.div`
-    display: flex;
-    flex-direction: column;
-    height: 79%;
+const SearchListContainer = styled.div`
+    flex: 1;
+`;
+
+const FavoritesContainer = styled.div`
 `;
 
 class App extends Component {
@@ -37,11 +40,13 @@ class App extends Component {
         <Header>
             <Title>Toronto Waste Lookup</Title>
         </Header>
-        <SearchBar />
-        <ListsContainer>
+        <SearchListContainer>
+            <SearchBar />
             <ResultsList />
+        </SearchListContainer>
+        <FavoritesContainer>
             <FavoritesList />
-        </ListsContainer>
+        </FavoritesContainer>
       </AppContainer>
     );
   }

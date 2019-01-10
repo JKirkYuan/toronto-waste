@@ -63,7 +63,7 @@ class ResultsListItem extends React.PureComponent<Props> {
     render() {
         const { waste } = this.props;
         const decodedBody = this.decodeHTML(waste.body);
-        if (this.props.favoritesList.includes(waste)) {
+        if (this.props.favoritesList.filter(favorite => favorite.title === waste.title).length > 0) {
             return (
                 <StyledResult>
                     <StyledFavoritedIcon onClick={() => this.handleFavoritesClick(waste)} />

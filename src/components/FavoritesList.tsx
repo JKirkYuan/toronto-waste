@@ -6,7 +6,6 @@ import { WasteData, addToFavorites } from '../actions/index';
 import ResultsListItem from './ResultsListItem';
 
 const StyledFavoritesContainer = styled.div`
-    margin-top: 2em;
     background-color: #f5fef9;
     height: 100%;
 `;
@@ -26,11 +25,11 @@ export type Props = StateProps;
 
 class FavoritesList extends Component<Props> {
     renderList() {
-        return this.props.favoritesList.map(waste => 
-            <ResultsListItem 
+        return this.props.favoritesList.map(waste =>
+            <ResultsListItem
                 key={waste.title}
                 waste={waste}
-            /> 
+            />
         );
     }
     render() {
