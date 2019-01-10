@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Dispatch, bindActionCreators } from 'redux';
-import { WasteData, addToFavorites, AddToFavoritesParams } from '../actions/index';
+import { WasteData, addToFavorites, removeFromFavorites } from '../actions/index';
 import styled from 'styled-components';
 import { IoIosStar } from 'react-icons/io';
 
@@ -43,6 +43,7 @@ export type StateProps = {
 
 export type DispatchProps = {
     addToFavorites: (waste: WasteData) => void;
+    removeFromFavorites: (waste: string) => void;
 }
 
 export type OwnProps = {
@@ -60,13 +61,16 @@ class ResultsListItem extends React.PureComponent<Props> {
     handleFavoritesClick = (waste: WasteData) =>{
         this.props.addToFavorites(waste);
     }
+    handleRemoveFavoritesClick = (wasteName: string) => {
+        this.props.removeFromFavorites(wasteName);
+    }
     render() {
         const { waste } = this.props;
         const decodedBody = this.decodeHTML(waste.body);
         if (this.props.favoritesList.filter(favorite => favorite.title === waste.title).length > 0) {
             return (
                 <StyledResult>
-                    <StyledFavoritedIcon onClick={() => this.handleFavoritesClick(waste)} />
+                    <StyledFavoritedIcon onClick={() => this.handleRemoveFavoritesClick(waste.title)} />
                     <ResultTitle>{waste.title}</ResultTitle>
                     <ResultDesc dangerouslySetInnerHTML={ {__html: `${decodedBody}`} } />
                 </StyledResult>
@@ -89,7 +93,7 @@ function mapStateToProps(state: StateProps) {
 }
 
 const mapDispatchToProps = (dispatch: Dispatch, ownProps: OwnProps): DispatchProps => {
-    return bindActionCreators({ addToFavorites }, dispatch);
+    return bindActionCreators({ addToFavorites, removeFromFavorites }, dispatch);
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(ResultsListItem);

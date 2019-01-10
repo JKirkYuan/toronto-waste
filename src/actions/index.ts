@@ -3,6 +3,7 @@ export const ADD_SEARCH_RESULT = 'Adding Search Results';
 export const LOAD_WASTE_REQUEST = 'Request for Waste List';
 export const CLEAR_WASTE_RESULTS = 'Clearing Results for Waste List';
 export const ADD_TO_FAVORITES = 'Adding item to Favorites';
+export const REMOVE_FROM_FAVORITES = 'Removing item from Favorites';
 
 export type WasteRequestParams = {
     type: typeof LOAD_WASTE_REQUEST;
@@ -55,5 +56,17 @@ export function addToFavorites(waste: WasteData): AddToFavoritesParams {
     return {
         type: ADD_TO_FAVORITES,
         payload: waste
+    }
+}
+
+export type RemoveFromFavoritesParams = {
+    type: typeof REMOVE_FROM_FAVORITES;
+    payload: string;
+}
+
+export function removeFromFavorites(wasteName: string): RemoveFromFavoritesParams {
+    return {
+        type: REMOVE_FROM_FAVORITES,
+        payload: wasteName
     }
 }
