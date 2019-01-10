@@ -23,3 +23,5 @@ Hosted on GitHub Pages ➡️ [https://jkirkyuan.github.io/toronto-waste/](https
 
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+Special shoutout to my mentor at work. [Angelo](https://github.com/angeloocana), best mentor in the world, taught me lots and applied some of his teachings in this project
