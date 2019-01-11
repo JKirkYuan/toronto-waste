@@ -18,6 +18,7 @@ const Header = styled.header`
     justify-content: center;
     align-items: center;
     display: flex;
+    text-align: center;
 `;
 
 const Title = styled.div`

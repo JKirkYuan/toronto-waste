@@ -25,7 +25,7 @@ const StyledInput = styled.input`
 
 const StyledButton = styled.button`
     margin-left: 1em;
-    width: 4%;
+    width: 6em;
     height: 4em;
     background-color: #1f824f;
     border-radius: 2px;
