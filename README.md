@@ -1,4 +1,4 @@
-# Shopify 2019 - Waste Wizard 🔮
+# Waste Wizard 🔮
 
 Have you ever wondered what kind waste items go where? Let's find out together by searching the items up in the **Toronto Waste Wizard** database
 
@@ -14,7 +14,7 @@ Hosted on GitHub Pages ➡️ [https://jkirkyuan.github.io/toronto-waste/](https
 
 ### Dependencies
 
-- React: When the criteria mentioned rendering a list, I knew React was the way to go :heart:. I also decided to use React because it made sense to me that I should be using a framework that Shopify put in the Web Engineer Intern job description
+- React: When the criteria mentioned rendering a list, I knew React was the way to go :heart:
 - TypeScript: Makes the code easier to read, beneficial for you and me
 - Redux: React is always good with a little state management
 - Redux-Saga: Async actions, needed for dispatching an action to fetch data from the API and storing it in the store
